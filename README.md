@@ -28,7 +28,7 @@ Run the script
 npx ts-node src/index.ts
 ```
 
-Open the browser and go to http://localhost:3001
+Open the browser and go to http://localhost:3000
 ```commandline
-start http://localhost:3001
+start http://localhost:3000
 ```

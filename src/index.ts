@@ -13,12 +13,12 @@ dotenv.config();
 /*
  * Create an Express application and get the
  * value of the PORT environment variable
- * from the `process.env`
+ * from the `process.env` (if a .env file is available)
  */
 const app: Express = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 /* Define a route for the root path ("/")
  using the HTTP GET method */
@@ -29,8 +29,8 @@ app.get("/", (req: Request, res: Response) => {
         steps: ['1. Download HTML Template Engine', '2. ???', '3. Profit!']
     }
 
-    // dynamically render the home.ejs file
-    res.render('home', { data: data });
+    // dynamically render the page.ejs file
+    res.render('page', { data: data });
 });
 
 /* Start the Express app and listen

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif; /* Set default font family */
+            background-color: #f2f2f2; /* Set background color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Horizontally center content */
+            align-items: center; /* Vertically center content */
+            height: 100vh; /* Set full height of viewport */
+        }
+
+        /* Container styles */
+        .container {
+            background-color: beige; /* Set background color of container */
+            padding: 20px; /* Add padding inside container */
+            border-radius: 10px; /* Add rounded corners to container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to container */
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center; /* Center align heading */
+            color: #333; /* Set heading color */
+        }
+
+        /* List styles */
+        ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* List item styles */
+        li {
+            margin-bottom: 10px; /* Add space between list items */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for content -->
+    <div class="container">
+        <!-- Heading -->
+        <h1>How to <%= data.title %>:</h1>
+
+        <!-- List of steps -->
+        <ul>
+            <% data.steps.forEach((item) => { %>
+                <!-- List item -->
+                <li>
+                    <%= item %> <!-- Step content -->
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
