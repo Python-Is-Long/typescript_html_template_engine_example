@@ -23,11 +23,18 @@ const port = process.env.PORT || 3001;
 /* Define a route for the root path ("/")
  using the HTTP GET method */
 app.get("/", (req: Request, res: Response) => {
-  res.render("home");
+    // prepare the data to be sent to the view
+    let data = {
+        title: 'Use HTML Template Engine',
+        steps: ['1. Download HTML Template Engine', '2. ???', '3. Profit!']
+    }
+
+    // dynamically render the home.ejs file
+    res.render('home', { data: data });
 });
 
 /* Start the Express app and listen
  for incoming requests on the specified port */
 app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+    console.log(`[server]: Server is running at http://localhost:${port}`);
 });
