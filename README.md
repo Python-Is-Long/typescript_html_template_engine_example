@@ -1,6 +1,10 @@
 # HTML Template Engine example with TypeScript (Express.js) + EJS
 
-Based on: https://blog.logrocket.com/how-to-set-up-node-typescript-express/
+References:
+
+https://blog.logrocket.com/how-to-set-up-node-typescript-express/
+
+https://www.geeksforgeeks.org/use-ejs-as-template-engine-in-node-js/
 
 ## Instruction (Windows)
 
